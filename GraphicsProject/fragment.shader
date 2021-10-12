@@ -42,14 +42,4 @@ void main() {
 
 	pColor = vec4(ambientColor + diffuseColor + specularColor, 1.0f);
 
-	//Snow
-	if (kNormal.y = 1.0f) {
-		vec4 red = (1.0f, 0.0f, 0.0f, 1.0f);
-		pColor = red;
-	}
-
-	if (pColor.g > 0.5f) {
-		pColor.b = pColor.g;
-		pColor.g = pColor.g / 2.0f;
-	}
 }
