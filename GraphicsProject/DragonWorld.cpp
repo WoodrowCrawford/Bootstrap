@@ -13,10 +13,10 @@ void DragonWorld::onStart()
 	
 	//Light
 	m_light = new Light(
-		{ 13.0f, 9.0f, 10.0f },
-		{ 0.5f, 0.5f, 0.5f, 1.0f },
-		{ 2.0f, 3.0f, 4.0f, 1.0f },
-		{ 6.0f, 1.0f, 1.0f, 2.0f }
+		{ 6.0f, 1.0f, 1.0f },          //Direction
+		{ 0.5f, 0.5f, 1.5f, 1.0f },    //Ambient
+		{ 2.0f, 3.0f, 4.0f, 1.0f },    //Diffuse
+		{ 6.0f, 1.0f, 1.0f, 2.0f }     //Specular
 	);
 	add(m_light);
 
@@ -30,6 +30,11 @@ void DragonWorld::onStart()
 	
 	//Cube
 	m_cube = new Cube();
+	m_cube->getTransform()->setPosition({ 2.0f, 0.0f, 0.0f });
+	m_cube->getTransform()->setScale(glm::vec3(0.3f));
+	add(m_cube);
+
+
 }
 
 

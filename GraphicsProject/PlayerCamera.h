@@ -10,8 +10,11 @@ public:
 	void onUpdate(float deltaTime) override;
 
 private:
-	float m_moveSpeed = 1.0f;
-	float m_lookSpeed = 1.0f;
+	//The move speed of the WASD keys
+	float m_moveSpeed = 1.0;
+
+	//The look speed of the mouse
+	float m_lookSpeed = 0.5f;
 
 	double m_currentMouseX = 0.0;
 	double m_currentMouseY = 0.0;

@@ -1,22 +1,141 @@
 #include "Cube.h"
 
-Cube::Vertex* Cube::generateVertices(unsigned int& vertexCount, unsigned int& triCount)
+Cube::Vertex* Cube::generateVertices(unsigned int& vertexCount)
 {
     Vertex* vertices = nullptr;
-    triCount = 12;
-    vertexCount = 36;
+    
+    vertexCount = 32;
 
     vertices = new Vertex[vertexCount];
 
-    initializeCorner(vertices, vertexCount, 0, { -0.5f, 0.5f, -0.5f }); //A
-    initializeCorner(vertices, vertexCount, 1, { 0.5f, 0.5f, 0.5f }); //B
-    initializeCorner(vertices, vertexCount, 2, { 1.0f, -1.0f, -1.0f }); //C
-    initializeCorner(vertices, vertexCount, 3, { -1.0f, -1.0f, 1.0f }); //D
-    initializeCorner(vertices, vertexCount, 4, { 1.0f, 1.0f, -1.0f }); //E
-    initializeCorner(vertices, vertexCount, 5, { -1.0f, 1.0f, 1.0f }); //f
-    initializeCorner(vertices, vertexCount, 6, { -1.0f, 0.5f, -0.5f }); //G
-    initializeCorner(vertices, vertexCount, 7, { 1.0f, -1.0f, -1.0f }); //H
 
+    ///Test #1
+    //////////////////////////////////////////
+    ////Triangle #1    A
+    initializeCorner(vertices, vertexCount, 0, { -1.0f, 1.0f, -1.0f });   // (-, +, -)
+    initializeCorner(vertices, vertexCount, 1, { -1.0f, 1.0f, 1.0f });    // (-, +, +)
+    initializeCorner(vertices, vertexCount, 2, { 1.0f, 1.0f, 1.0f });     // (+, +, +)
+
+
+    ////Triangle #2    B
+    initializeCorner(vertices, vertexCount, 3, { 1.0f, -1.0f, 1.0f });
+    initializeCorner(vertices, vertexCount, 4, { 1.0f, 1.0f, 1.0f });
+    initializeCorner(vertices, vertexCount, 5, { 1.0f, -1.0f, 1.0f });
+
+
+    ////Triangle #3    C
+    initializeCorner(vertices, vertexCount, 6, { 1.0f, -1.0f, 1.0f });
+    initializeCorner(vertices, vertexCount, 7, { 1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 8, { -1.0f, 1.0f, -1.0f }); 
+
+
+    ////Triangle #4    D
+    initializeCorner(vertices, vertexCount, 9, { -1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 10, { -1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 11, { -1.0f, -1.0f, 1.0f }); 
+
+
+    ////Triangle #5    E
+    initializeCorner(vertices, vertexCount, 12, { -1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 13, { 1.0f, 1.0f, -1.0f }); 
+    initializeCorner(vertices, vertexCount, 14, { -1.0f, -1.0f, 1.0f }); 
+
+
+    ////Triangle #6    F
+    initializeCorner(vertices, vertexCount, 15, { -1.0f, -1.0f, -1.0f }); 
+    initializeCorner(vertices, vertexCount, 16, { 1.0f, 1.0f, -1.0f }); 
+    initializeCorner(vertices, vertexCount, 17, { -1.0f, 1.0f, -1.0f }); 
+
+
+    ////Triangle #7    G
+    initializeCorner(vertices, vertexCount, 18, { -1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 19, { -1.0f, -1.0f, -1.0f }); 
+    initializeCorner(vertices, vertexCount, 20, { -1.0f, -1.0f, -1.0f }); 
+
+
+    ////Triangle #8    H
+    initializeCorner(vertices, vertexCount, 21, { -1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 22, { 1.0f, 1.0f, -1.0f }); 
+    initializeCorner(vertices, vertexCount, 23, { -1.0f, 1.0f, 1.0f }); 
+
+
+    // //Triangle #9   I
+    initializeCorner(vertices, vertexCount, 24, { -1.0f, -1.0f, 1.0f }); 
+    initializeCorner(vertices, vertexCount, 25, { 1.0f, 1.0f, -1.0f }); 
+    initializeCorner(vertices, vertexCount, 26, { -1.0f, 1.0f, -1.0f }); 
+
+
+    // //Triangle #10  J
+    initializeCorner(vertices, vertexCount, 27, { 1.0f, 1.0f, -1.0f }); 
+ //   initializeCorner(vertices, vertexCount, 28, { 1.0f, 1.0f, -1.0f }); 
+  //  initializeCorner(vertices, vertexCount, 29, { -1.0f, 1.0f, 1.0f }); 
+
+
+    ////Triangle #11  
+    //initializeCorner(vertices, vertexCount, 30, { 1.0f, -1.0f, 1.0f });
+   // initializeCorner(vertices, vertexCount, 31, { -1.0f, 1.0f, -1.0f }); 
+   // initializeCorner(vertices, vertexCount, 32, { -1.0f, -1.0f, 1.0f }); 
+
+   
+
+
+
+
+    /////Test #2
+    ///////////////////////////////////////////////////////////////////////
+    //1
+    //initializeCorner(vertices, vertexCount, 0, { -1.0,  -1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 1, { -1.0f, -1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 2, { -1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 3, { 1.0f, 1.0f, -1.0f });
+
+    ////2
+    //initializeCorner(vertices, vertexCount, 4, { -1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 5, { -1.0f, 1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 6, { 1.0f, -1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 7, { -1.0f, -1.0f, -1.0f });
+
+    ////3
+    //initializeCorner(vertices, vertexCount, 8, { 1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 9, { 1.0f, 1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 10, { 1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 11, { -1.0f,-1.0f,-1.0f });
+
+    ////4
+    //initializeCorner(vertices, vertexCount, 12, { -1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 13, { -1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 14, { -1.0f, 1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 15, { 1.0f,-1.0f, 1.0f });
+
+    ////5
+    //initializeCorner(vertices, vertexCount, 16, { -1.0f,-1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 17, { -1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 18, { -1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 19, { -1.0f,-1.0f, 1.0f });
+
+    ////6
+    //initializeCorner(vertices, vertexCount, 20, { 1.0f,-1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 21, { 1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 22, { 1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 23, { 1.0f, 1.0f,-1.0f });
+
+    ////7
+    //initializeCorner(vertices, vertexCount, 20, { 1.0f,-1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 21, { 1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 22, { 1.0f,-1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 23, { 1.0f, 1.0f, 1.0f });
+
+    ////8
+    //initializeCorner(vertices, vertexCount, 20, { 1.0f, 1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 21, { -1.0f, 1.0f,-1.0f });
+    //initializeCorner(vertices, vertexCount, 22, { 1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 23, { -1.0f, 1.0f,-1.0f });
+
+    ////
+    //initializeCorner(vertices, vertexCount, 20, { -1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 21, { 1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 22, { -1.0f, 1.0f, 1.0f });
+    //initializeCorner(vertices, vertexCount, 23, { 1.0f,-1.0f, 1.0f });
 
 
     return vertices;

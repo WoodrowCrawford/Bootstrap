@@ -18,5 +18,6 @@ private:
 	Light* m_light = nullptr;
 	OBJMesh* m_dragon = nullptr;
 	Cube* m_cube = nullptr;
+	
 };
 
