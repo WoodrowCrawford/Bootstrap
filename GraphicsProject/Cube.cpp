@@ -4,7 +4,7 @@ Cube::Vertex* Cube::generateVertices(unsigned int& vertexCount)
 {
     Vertex* vertices = nullptr;
     
-    vertexCount = 35;
+    vertexCount = 36;
 
     vertices = new Vertex[vertexCount];
 

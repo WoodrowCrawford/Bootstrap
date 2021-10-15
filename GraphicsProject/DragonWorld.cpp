@@ -31,7 +31,7 @@ void DragonWorld::onStart()
 	//Cube
 	m_cube = new Cube();
 	m_cube->getTransform()->setPosition({ 2.0f, 0.0f, 0.0f });
-	m_cube->getTransform()->setScale(glm::vec3(0.3f));
+	m_cube->getTransform()->setScale(glm::vec3(5.0f));
 	add(m_cube);
 
 
