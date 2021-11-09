@@ -14,7 +14,7 @@ private:
 	float m_moveSpeed = 1.0;
 
 	//The look speed of the mouse
-	float m_lookSpeed = 0.5f;
+	float m_lookSpeed = 0.2f;
 
 	double m_currentMouseX = 0.0;
 	double m_currentMouseY = 0.0;

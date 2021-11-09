@@ -11,14 +11,27 @@ void DragonWorld::onStart()
 	add(m_camera);
 
 	
-	//Light
-	m_light = new Light(
-		{ 6.0f, 1.0f, 1.0f },          //Direction
+	//Light #1
+	m_light1 = new Light(
+		{ 10.0f, 1.0f, 1.0f },          //Direction
 		{ 0.5f, 0.5f, 1.5f, 1.0f },    //Ambient
 		{ 2.0f, 3.0f, 4.0f, 1.0f },    //Diffuse
 		{ 6.0f, 1.0f, 1.0f, 2.0f }     //Specular
 	);
-	add(m_light);
+
+
+	//Light #2
+	m_light2 = new Light(
+		{ 10.0f, 1.0f, 1.0f },          //Direction
+		{ 0.5f, 0.5f, 1.5f, 1.0f },    //Ambient
+		{ 2.0f, 3.0f, 4.0f, 1.0f },    //Diffuse
+		{ 2.0f, 1.0f, 1.0f, 2.0f }     //Specular
+	);
+
+
+	//Adds the lights
+	//add(m_light1);
+	add(m_light2);
 
 	//Dragon
 	m_dragon = new OBJMesh();
@@ -41,6 +54,6 @@ void DragonWorld::onStart()
 void DragonWorld::onEnd()
 {
 	destroy(m_camera);
-	destroy(m_light);
+	destroy(m_light1);
 	destroy(m_dragon);
 }
