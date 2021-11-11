@@ -69,6 +69,6 @@ void main() {
 
 
 
-	pColor = vec4(ambientColor2 + diffuseColor + specularColor, 1.0f);
+	pColor = vec4 (ambientColor + ambientColor2 + diffuseColor + diffuseColor2 + specularColor + specularColor2, 1.0f);
 
 }
