@@ -23,15 +23,26 @@ void DragonWorld::onStart()
 	//Light #2
 	m_light2 = new Light(
 		{ 10.0f, 1.0f, 1.0f },          //Direction
+<<<<<<< HEAD
 		{ 0.0, 0.5f, 1.0f, 1.0f },    //Ambient
 		{ 1.0f, 2.0f, 3.0f, 1.0f },    //Diffuse
 		{ 1.0f, 1.0f, 1.0f, 2.0f }     //Specular
+=======
+		{ 0.5f, 0.5f, 1.5f, 1.0f },    //Ambient
+		{ 2.0f, 3.0f, 4.0f, 1.0f },    //Diffuse
+		{ 2.0f, 1.0f, 1.0f, 2.0f }     //Specular
+>>>>>>> parent of 2ebfa15... Still working on making 2 lights
 	);
 
 
 	//Adds the lights
+<<<<<<< HEAD
 	add(m_light1);
 	//add(m_light2);
+=======
+	//add(m_light1);
+	add(m_light2);
+>>>>>>> parent of 2ebfa15... Still working on making 2 lights
 
 	//Dragon
 	m_dragon = new OBJMesh();
