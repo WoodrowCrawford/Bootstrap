@@ -63,6 +63,9 @@
     <ClCompile Include="Cube.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TextureFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -113,26 +116,9 @@
     <ClInclude Include="Cube.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="fragment.shader">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="vertex.shader">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Dragon.mtl">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Lucy.mtl">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Buddha.mtl">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Bunny.mtl">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClInclude Include="TextureFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Lucy.obj">
@@ -147,5 +133,16 @@
     <CopyFileToFolders Include="Dragon.obj">
       <Filter>Resource Files</Filter>
     </CopyFileToFolders>
+    <CopyFileToFolders Include="Buddha.mtl" />
+    <CopyFileToFolders Include="Bunny.mtl" />
+    <CopyFileToFolders Include="Dragon.mtl" />
+    <CopyFileToFolders Include="fragment.shader" />
+    <CopyFileToFolders Include="Lucy.mtl" />
+    <CopyFileToFolders Include="vertex.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="earth_normal.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
