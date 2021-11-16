@@ -26,7 +26,7 @@ out vec4 pColor;
 
 void main() {
 	vec3 kNormal = normalize(fNormal.xyz);
-	vec3 iNormal1 = normalize(iDirection0);
+	vec3 iNormal1 = normalize(iDirection1);
 	vec3 iNormal2 = normalize(iDirection1);
 
 	//Light 1

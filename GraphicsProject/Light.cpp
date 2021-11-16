@@ -1,8 +1,10 @@
 #include "Light.h"
 #include "gl_core_4_4.h"
+#include <string>
 
-Light::Light(glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular)
+Light::Light(int numOfLights, glm::vec3 direction, glm::vec4 ambient, glm::vec4 diffuse, glm::vec4 specular)
 {
+	m_numOfLights = numOfLights;
 	setDirection(direction);
 	m_ambient = ambient;
 	m_diffuse = diffuse;
@@ -19,10 +21,18 @@ void Light::onDraw()
 		return;
 	}
 
-	int lightDirection = glGetUniformLocation(program, "iDirection");
-	int lightAmbient = glGetUniformLocation(program, "iAmbient");
-	int lightDiffuse = glGetUniformLocation(program, "iDiffuse");
-	int lightSpecular = glGetUniformLocation(program, "iSpecular");
+
+	std::string bound = ("iDirection" + std::to_string(m_numOfLights));
+	int lightDirection = glGetUniformLocation(program, bound.c_str());
+
+	bound = ("iAmbient" + std::to_string(m_numOfLights));
+	int lightAmbient = glGetUniformLocation(program, bound.c_str());
+
+	bound = ("iDiffuse" + std::to_string(m_numOfLights));
+	int lightDiffuse = glGetUniformLocation(program, bound.c_str());
+
+	bound = ("iSpecular" + std::to_string(m_numOfLights));
+	int lightSpecular = glGetUniformLocation(program, bound.c_str());
 
 	if (lightDirection >= 0) {
 		glm::vec3 direction = getDirection();
