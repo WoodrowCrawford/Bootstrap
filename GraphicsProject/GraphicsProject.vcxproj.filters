@@ -141,7 +141,7 @@
     <CopyFileToFolders Include="vertex.shader" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="earth_normal.jpg">
+    <Image Include="earth_diffuse.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

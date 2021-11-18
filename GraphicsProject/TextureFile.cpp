@@ -1,10 +1,16 @@
 #include "TextureFile.h"
 #include <gl_core_4_4.h>
 #include "GLFW//glfw3.h"
+#include "Texture.h"
 
 void TextureFile::onStart()
 {
 	Quad::onStart();
+    
+	if (!m_texture.load(m_fileName))
+	{
+		printf("The texture did not load");
+	}
 }
 
 void TextureFile::onDraw()

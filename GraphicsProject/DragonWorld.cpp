@@ -1,6 +1,7 @@
 #include "DragonWorld.h"
 
 
+
 void DragonWorld::onStart()
 {
 	//Camera
@@ -41,6 +42,11 @@ void DragonWorld::onStart()
 	m_dragon->getTransform()->setScale(glm::vec3(0.2f));
 	add(m_dragon);
 
+
+	//Gets and adds the texture
+	m_texture = new TextureFile("earth_diffuse.jpg", { 0.25f, 0.25f, 0.25f, 1.0f });
+	m_texture->getTransform()->setScale({ 3, 2, 1 });
+	add(m_texture);
 	
 	//Cube
 	m_cube = new Cube();
@@ -49,9 +55,8 @@ void DragonWorld::onStart()
 	add(m_cube);
 
 
-	//Gets and adds the texture
-	m_texture = new TextureFile("earth_normal.jpg", { 0.3f, 0.3f, 0.3f, 1.0f });
-	add(m_texture);
+	
+
 }
 
 
@@ -61,5 +66,5 @@ void DragonWorld::onEnd()
 	destroy(m_light1);
 	destroy(m_light2);
 	destroy(m_dragon);
-	destroy(m_texture);
+	destroy(m_cube);
 }
