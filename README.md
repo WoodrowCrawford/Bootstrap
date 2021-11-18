@@ -1,5 +1,21 @@
 # aieBootstrap
 
+This application is used to show graphics and lighting in Visual Studios using bootstrap.
+
+# How to play
+
+Use WASD keys to move.
+Use Q and E to move up and down
+Look around by holding the right mouse button and moving the mouse.
+
+
+
+
+
+
+
+## 
+
 *NOTE: This project is no longer being actively maintained*
 
 The base project code used for the Advanced Diploma of Professional Game Development to aid in graphical real-time applications.
