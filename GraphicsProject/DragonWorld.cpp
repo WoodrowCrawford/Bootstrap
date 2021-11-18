@@ -49,6 +49,9 @@ void DragonWorld::onStart()
 	add(m_cube);
 
 
+	//Gets and adds the texture
+	m_texture = new TextureFile("earth_normal.jpg", { 0.3f, 0.3f, 0.3f, 1.0f });
+	add(m_texture);
 }
 
 
@@ -58,4 +61,5 @@ void DragonWorld::onEnd()
 	destroy(m_light1);
 	destroy(m_light2);
 	destroy(m_dragon);
+	destroy(m_texture);
 }
